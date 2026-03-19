@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  @apply bg-[#1a1a1a] text-zinc-300 antialiased overflow-hidden;
+}
+
+/* Custom range input styling */
+input[type='range']::-webkit-slider-thumb {
+  @apply appearance-none w-3 h-3 bg-emerald-500 rounded-full cursor-pointer shadow-lg shadow-emerald-500/20 border-2 border-[#121212];
+}
+
+input[type='range']::-moz-range-thumb {
+  @apply w-3 h-3 bg-emerald-500 border-none rounded-full cursor-pointer shadow-lg shadow-emerald-500/20 border-2 border-[#121212];
+}
+
+/* Hide scrollbars for a cleaner look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
